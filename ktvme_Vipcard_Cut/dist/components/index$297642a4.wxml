@@ -1,0 +1,90 @@
+<template name="index$297642a4">
+  <view class="_div data-v-cf96967a page">
+    <canvas class="_canvas data-v-cf96967a canvas" style="width: 300rpx; height: 300rpx;" canvas-id="qrcode"></canvas>
+    <view class="_div data-v-cf96967a first">
+      <image class="_img data-v-cf96967a userinfo-avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="_div data-v-cf96967a userinfo-nickname">
+        <view class="_div data-v-cf96967a">{{bindedcard.membername}}</view>
+      </view>
+      <label class="_span data-v-cf96967a card-name"> {{bindedcard.gradename}}</label>
+      <label class="_span data-v-cf96967a card-num"> NO.{{bindedcard.cardnum}}</label>
+      <view class="_div data-v-cf96967a card">
+        <view class="_div data-v-cf96967a bottom1">
+          <image class="_img data-v-cf96967a icon" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/店铺.png"></image>
+          <view class="_div data-v-cf96967a card-ktv">{{bindedcard.companyname}}</view>
+          <view class="_div data-v-cf96967a card-time">有效期至：{{bindedcard.uselimitdate}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{qrcode}}" class="_div data-v-cf96967a show-qr">
+      <view class="_div data-v-cf96967a barcode">
+        <view wx:if="{{!barcpic}}" class="_div data-v-cf96967a">
+          <canvas style="width: 500rpx; height: 120rpx;bakcground:red" canvas-id="barcode" class="_canvas data-v-cf96967a"></canvas>
+        </view>
+        <view wx:else class="_div data-v-cf96967a">
+          <image src="{{barcpic}}" alt class="_img data-v-cf96967a"></image>
+        </view>
+        <view class="_div data-v-cf96967a bar_font">{{barcode}}</view>
+      </view>
+      <view class="_div data-v-cf96967a container">
+        <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-cf96967a">
+          <image src="{{picsrc}}" alt class="_img data-v-cf96967a"></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-cf96967a second">
+      <form style="outline:none" bindsubmit="handleProxy" report-submit="true" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_form data-v-cf96967a">
+        <button class="_button data-v-cf96967a img" form-type="submit">
+          <image class="_img data-v-cf96967a qrcode" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/qrcode_icon.png"></image>
+        </button>
+      </form>
+      <view wx:if="{{!qrcode}}" class="_div data-v-cf96967a show">点击显示二维码</view>
+      <view wx:else class="_div data-v-cf96967a show">点击隐藏二维码</view>
+      <view class="_div data-v-cf96967a menu" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+        <image class="_img data-v-cf96967a pic" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/money (1).png"></image>
+        <label class="_span data-v-cf96967a menu-font">我的资产</label>
+      </view>
+      <view class="_div data-v-cf96967a content" wx:if="{{menu.show1}}">
+        <view class="_div data-v-cf96967a item">
+          <label class="_span data-v-cf96967a item-name">积分</label>
+          <label class="_span data-v-cf96967a item-content">{{bindedcard.integralbalance}}</label>
+        </view>
+        <view class="_div data-v-cf96967a item" wx:if="{{!usestorage}}">
+          <label class="_span data-v-cf96967a item-name">金额</label>
+          <label class="_span data-v-cf96967a item-content">￥{{bindedcard.accountbalance}}</label>
+        </view>
+        <view class="_div data-v-cf96967a item" wx:if="{{!usestorage}}">
+          <label class="_span data-v-cf96967a item-name">本金</label>
+          <label class="_span data-v-cf96967a item-content">￥{{bindedcard.accountcash}}</label>
+        </view>
+        <view class="_div data-v-cf96967a item" wx:if="{{!usestorage}}">
+          <label class="_span data-v-cf96967a item-name">赠金</label>
+          <label class="_span data-v-cf96967a item-content">￥{{bindedcard.accountpresent}}</label>
+        </view>
+      </view>
+      <view class="_div data-v-cf96967a menu" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+        <image class="_img data-v-cf96967a pic" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/people3 (1).png"></image>
+        <label class="_span data-v-cf96967a menu-font">我的信息</label>
+      </view>
+      <view class="_div data-v-cf96967a content" wx:if="{{menu.show3}}">
+        <view class="_div data-v-cf96967a item" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-cf96967a image" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/用户.png"></image>
+          <label style="font-size:30rpx;" class="_span data-v-cf96967a">个人信息</label>
+        </view>
+        <view class="_div data-v-cf96967a item" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-cf96967a image" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/账单.png"></image>
+          <label style="font-size:30rpx;" class="_span data-v-cf96967a">订单管理</label>
+        </view>
+        <view class="_div data-v-cf96967a item" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-cf96967a image" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/皇冠.png"></image>
+          <label style="font-size:30rpx;" class="_span data-v-cf96967a">会员特权</label>
+        </view>
+        <view class="_div data-v-cf96967a item" wx:if="{{!bindedcard.isunbind}}" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-cf96967a image" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/停用.png"></image>
+          <label style="font-size:30rpx" class="_span data-v-cf96967a">解绑会员卡</label>
+        </view>
+      </view>
+      <view class="_div data-v-cf96967a bottom"></view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,35 @@
+<template name="index$1142586e">
+  <view class="_div data-v-5a552683">
+    <view class="_div data-v-5a552683 display">
+      <input style="width:30vw;text-align:center" value="姓名" disabled class="_input data-v-5a552683" />
+      <input style="width:70vw" maxlength="12" placeholder="请输入姓名" value="{{name}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-5a552683" />
+    </view>
+    <label class="_span data-v-5a552683 warn">{{show}}</label>
+    <view class="_div data-v-5a552683 display" style="margin-top:2vh">
+      <input style="width:30vw;text-align:center" value="性别" disabled class="_input data-v-5a552683" />
+      <radio-group wx:if="{{userInfo.gender==2}}" bindchange="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_radio-group data-v-5a552683">
+        <radio class="_radio data-v-5a552683 radio1" value="男">男</radio>
+        <radio checked class="_radio data-v-5a552683 radio2" value="女">女</radio>
+      </radio-group>
+      <radio-group wx:else bindchange="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_radio-group data-v-5a552683">
+        <radio checked class="_radio data-v-5a552683 radio1" value="男">男</radio>
+        <radio class="_radio data-v-5a552683 radio2" value="女">女</radio>
+      </radio-group>
+    </view>
+    <view class="_div data-v-5a552683 display">
+      <input style="width:30vw;text-align:center" value="手机号" disabled class="_input data-v-5a552683" />
+      <input style="width:70vw" value="{{mobile}}" bindinput="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_input data-v-5a552683" />
+    </view>
+    <view class="_div data-v-5a552683 display">
+      <input style="width:30vw;text-align:center" value="生日" disabled class="_input data-v-5a552683" />
+      <picker mode="date" value="{{startDate}}" start="pickerStart" end="2217-09-01" bindchange="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_picker data-v-5a552683">
+        <view class="_div data-v-5a552683 dateshow">
+          <view style="position: relative;top: 1.9vh;left: 0rpx;" class="_div data-v-5a552683">{{ startDate }}</view>
+        </view>
+      </picker>
+    </view>
+    <view class="_div data-v-5a552683 display">
+      <button style="background:#318bf1;color:white;border-radius:10px;width:30vw" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_button data-v-5a552683">完成</button>
+    </view>
+  </view>
+</template>

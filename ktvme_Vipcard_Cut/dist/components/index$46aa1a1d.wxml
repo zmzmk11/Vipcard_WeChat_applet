@@ -1,0 +1,5 @@
+<template name="index$46aa1a1d">
+  <view class="_div data-v-1b9b7432 page">
+    <map class="_map data-v-1b9b7432 map" show-location="{{true}}" longitude="{{map.lon}}" enable-rotate="{{ture}}" enable-overlooking="{{ture}}" enable-3D="{{true}}" latitude="{{map.lat}}" markers="{{markers}}"></map>
+  </view>
+</template>

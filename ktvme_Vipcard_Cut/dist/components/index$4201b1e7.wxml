@@ -1,0 +1,53 @@
+<template name="index$4201b1e7">
+  <view class="_div data-v-6e5727ec page">
+    <view class="_div data-v-6e5727ec first">
+      <view class="_div data-v-6e5727ec inline">
+        <image class="_img data-v-6e5727ec userinfo-avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <view class="_div data-v-6e5727ec userinfo-nickname">{{cardinfo.data.membername}}</view>
+      </view>
+      <view class="_div data-v-6e5727ec line"></view>
+      <view class="_div data-v-6e5727ec inline" style="height:7vh;">
+        <view class="_div data-v-6e5727ec integral">
+          <image class="_img data-v-6e5727ec img" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/积分.png"></image>
+          <view class="_div data-v-6e5727ec font">积分
+            <view style="color:rgb(255, 115, 0);margin-left:3vw" class="_div data-v-6e5727ec">{{cardinfo.data.integralbalance}}</view>
+          </view>
+        </view>
+        <view class="_div data-v-6e5727ec cline"></view>
+        <view class="_div data-v-6e5727ec integral" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-6e5727ec img" style="margin-left:12vw" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/记录 (1).png"></image>
+          <view class="_div data-v-6e5727ec font">兑换记录</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-6e5727ec second">
+      <view class="_div data-v-6e5727ec title"> 大家都在兑 </view>
+      <view class="_div data-v-6e5727ec line" style="width:100vw;margin-left:0vw;margin-top:1vh"></view>
+      <scroll-view scroll-y="{{true}}" class="_scroll-view data-v-6e5727ec" style=" {{('height:' + '70vh' + ';')}}">
+        <view class="_div data-v-6e5727ec null" wx:if="{{!integral.length}}">
+          <image class="_img data-v-6e5727ec empty" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/empty_prompt.png"></image>
+          <view class="_div data-v-6e5727ec font_empty">该商家暂无积分兑换规则~</view>
+        </view>
+        <view class="_div data-v-6e5727ec content" wx:else>
+          <view wx:key="item" key="{{item}}" class="_div data-v-6e5727ec item" wx:for="{{integral}}" wx:for-index="index" wx:for-item="item">
+            <view wx:if="{{item.id}}" class="_div data-v-6e5727ec coupon" bindtap="handleProxy" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}">
+              <view class="_div data-v-6e5727ec coupon_name">{{item.change_money+item.present_money}}元会员充值卡</view>
+              <view class="_div data-v-6e5727ec coupon_integral">{{item.integral}}
+                <label style="color:gray" class="_span data-v-6e5727ec">积分</label>
+              </view>
+              <image class="_img data-v-6e5727ec img1" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/优惠券icon.png"></image>
+            </view>
+            <view wx:elif="{{item.integral_id}}" class="_div data-v-6e5727ec coupon" bindtap="handleProxy" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}">
+              <view class="_div data-v-6e5727ec coupon_name">{{item.couponname}}</view>
+              <view class="_div data-v-6e5727ec coupon_integral">{{item.integral}}
+                <label style="color:gray" class="_span data-v-6e5727ec">积分</label>
+              </view>
+              <image class="_img data-v-6e5727ec img2" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/优惠券icon.png"></image>
+            </view>
+            <view class="_div data-v-6e5727ec line" wx:if="{{(index+1)%2==0}}" style="margin-top:1vh;margin-left:-55vw;width:100vw"></view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

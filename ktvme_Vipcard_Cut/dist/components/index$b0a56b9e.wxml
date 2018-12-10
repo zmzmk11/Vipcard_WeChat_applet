@@ -1,0 +1,33 @@
+<template name="index$b0a56b9e">
+  <view class="_div data-v-47288a36 page">
+    <view class="_div data-v-47288a36 head">请确认您的个人信息</view>
+    <view style="background:white" class="_div data-v-47288a36">
+      <view class="_div data-v-47288a36 display">
+        <input style="width:30vw;text-align:center;padding-right:10vw" value="姓名" disabled class="_input data-v-47288a36" />
+        <input style="width:60vw;color:gray" maxlength="12" placeholder="请输入姓名" value="{{choose.membername}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-47288a36" />
+      </view>
+      <label hidden="{{!(show)}}" class="_span data-v-47288a36 warn">{{show}}</label>
+      <view class="_div data-v-47288a36 line"></view>
+      <view class="_div data-v-47288a36 display">
+        <input style="width:30vw;text-align:center" value="性别" disabled class="_input data-v-47288a36" />
+        <view class="_div data-v-47288a36 radio">
+          <view wx:key="item.id" key="{{item.id}}" bindtap="handleProxy" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" wx:for="{{gender}}" wx:for-index="index" wx:for-item="item" class="_div data-v-47288a36">
+            <image class="_img data-v-47288a36 radio-icon" wx:if="{{item.isChecked}}" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页_选择.png"></image>
+            <image class="_img data-v-47288a36 radio-icon" wx:else src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页_选择常态.png"></image>
+            <view style="margin-right:20rpx" class="_div data-v-47288a36">{{item.value}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-47288a36 line"></view>
+      <view class="_div data-v-47288a36 display">
+        <input style="width:30vw;text-align:center" value="生日" disabled class="_input data-v-47288a36" />
+        <picker mode="date" value="{{startDate}}" start="pickerStart" end="2217-09-01" bindchange="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_picker data-v-47288a36">
+          <view class="_div data-v-47288a36 dateshow">
+            <view style="position: relative;top: 1.9vh;left: 10vw" class="_div data-v-47288a36">{{ startDate }}</view>
+          </view>
+        </picker>
+      </view>
+    </view>
+    <button class="_button data-v-47288a36 btn" style bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">确认</button>
+  </view>
+</template>

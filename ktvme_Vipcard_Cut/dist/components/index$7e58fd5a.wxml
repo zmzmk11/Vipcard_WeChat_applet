@@ -1,0 +1,50 @@
+<template name="index$7e58fd5a">
+  <view class="_div data-v-efb04d30">
+    <view class="_div data-v-efb04d30">
+      <view wx:if="{{showPopUp||showBind}}" class="_div data-v-efb04d30 page"></view>
+      <view wx:if="{{showPopUp}}" class="_div data-v-efb04d30 pop-up">
+        <view class="_div data-v-efb04d30 font-a">需要您的授权</view>
+        <view class="_div data-v-efb04d30 font-b">由于用户注册需要</view>
+        <view class="_div data-v-efb04d30 font-b">请在稍后的提示框中点击“确认授权”</view>
+        <image src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/手机号授权图.jpg" class="_img data-v-efb04d30"></image>
+        <button class="_button data-v-efb04d30 btn" open-type="getPhoneNumber" bindgetphonenumber="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">我知道了</button>
+      </view>
+      <view wx:if="{{showBind}}" class="_div data-v-efb04d30">
+        <view class="_div data-v-efb04d30 pop-up-bind">
+          <view class="_div data-v-efb04d30">实体卡号绑定</view>
+          <input maxlength="20" type="number" placeholder="请输入实体卡号" value="{{cardnum}}" bindinput="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_input data-v-efb04d30" />
+          <button class="_button data-v-efb04d30 bind-btn" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">绑卡</button>
+        </view>
+        <image class="_img data-v-efb04d30 close" bindtap="handleProxy" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/关闭3.png" data-eventid="{{'3'}}" data-comkey="{{$k}}"></image>
+      </view>
+      <view class="_div data-v-efb04d30 head">
+        <view class="_div data-v-efb04d30 head-title">会员卡包</view>
+        <view class="_div data-v-efb04d30 head-content">这里可以管理您的KTV会员卡哦</view>
+      </view>
+      <view class="_div data-v-efb04d30 items">
+        <view class="_div data-v-efb04d30 item">
+          <view class="_div data-v-efb04d30">
+            <image src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员_03.png" class="_img data-v-efb04d30"></image>
+          </view>
+          <view class="_div data-v-efb04d30">
+            <label class="_span data-v-efb04d30 title">会员卡随身带</label>
+            <label class="_span data-v-efb04d30 content">不用再让会员卡抢占钱包的一席之地</label>
+          </view>
+        </view>
+        <view class="_div data-v-efb04d30 item">
+          <view class="_div data-v-efb04d30">
+            <image src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员_06_03.png" class="_img data-v-efb04d30"></image>
+          </view>
+          <view class="_div data-v-efb04d30">
+            <label class="_span data-v-efb04d30 title">优惠轻松享</label>
+            <label class="_span data-v-efb04d30 content">轻松便捷还能享受各种消费满赠</label>
+          </view>
+        </view>
+      </view>
+      <button class="_button data-v-efb04d30 btn1" open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">
+        <image src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/通用绑卡小程序_03.png" class="_img data-v-efb04d30"></image>手机号快捷绑卡 </button>
+      <button class="_button data-v-efb04d30 btn2" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">
+        <image src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/通用绑卡小程序_06.png" class="_img data-v-efb04d30"></image>实体卡号绑卡 </button>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,16 @@
+<template name="index$4ddd2ed2">
+  <view class="_div data-v-72b53cac page" style>
+    <view class="_div data-v-72b53cac header"> 门店选择 </view>
+    <scroll-view scroll-y="{{true}}" class="_scroll-view data-v-72b53cac" style=" {{('height:' + '93vh' + ';' + 'background:' + 'white' + ';')}}">
+      <view wx:key="item" key="{{item}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{ktvList}}" wx:for-index="index" wx:for-item="item" class="_div data-v-72b53cac">
+        <view class="_div data-v-72b53cac items">
+          <image class="_img data-v-72b53cac pic" src="{{item.logourl}}"></image>
+          <view class="_div data-v-72b53cac item">
+            <view class="_div data-v-72b53cac companyname">{{item.companyname}}</view>
+            <view class="_div data-v-72b53cac companyaddress">{{item.companyaddress}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>
