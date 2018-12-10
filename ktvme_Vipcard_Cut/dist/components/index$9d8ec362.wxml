@@ -1,0 +1,44 @@
+<template name="index$9d8ec362">
+  <view class="_div data-v-f7da0fba">
+    <view style="height:6vh;background:#EAEAEA;" class="_div data-v-f7da0fba">
+      <view class="_a data-v-f7da0fba tag">请选择会员卡：</view>
+    </view>
+    <scroll-view enable-back-to-top="{{true}}" scroll-y="{{true}}" class="_scroll-view data-v-f7da0fba" style=" {{('height:' + '86vh' + ';')}}">
+      <radio-group bindchange="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_radio-group data-v-f7da0fba">
+        <view class="_div data-v-f7da0fba card-detail" wx:if="{{item.sellmoney==0&&item.hidesell}}" wx:key="index" key="{{index}}" wx:for="{{cardItems}}" wx:for-index="index" wx:for-item="item">
+          <radio class="_radio data-v-f7da0fba radio-type" value="{{item.gradeid}}" checked="{{item.checked}}">
+            <view class="_div data-v-f7da0fba first">
+              <view class="_div data-v-f7da0fba small-card" style=" {{('background-image:' + ('url(' + item.cardpicid + ')') + ';')}}"></view>
+              <label class="_span data-v-f7da0fba card_name">{{item.gradename}}</label>
+              <view class="_div data-v-f7da0fba cost">
+                <view style="text-align:right" wx:if="{{item.sellmoney==0}}" class="_p data-v-f7da0fba">免费</view>
+                <view style="text-align:right" wx:else class="_p data-v-f7da0fba">￥{{item.sellmoney}}</view>
+              </view>
+            </view>
+            <view class="_div data-v-f7da0fba dashed"></view>
+            <view class="_div data-v-f7da0fba second">
+              <view class="_div data-v-f7da0fba">
+                <view class="_div data-v-f7da0fba discount">
+                  <label class="_span data-v-f7da0fba hui">惠</label>
+                  <label class="_span data-v-f7da0fba detail">享受会员优惠
+                    <label wx:if="{{!item.useintegral}}" class="_span data-v-f7da0fba">、可积分</label>
+                  </label>
+                </view>
+                <view class="_div data-v-f7da0fba discount" wx:if="{{item.has_red}}" style="margin-top:15rpx;">
+                  <label class="_span data-v-f7da0fba flag">￥</label>
+                  <label class="_span data-v-f7da0fba detail">建卡就送
+                    <label style="color:#318bf1" class="_span data-v-f7da0fba">{{item.red_envelop_memo}}</label>
+                  </label>
+                </view>
+              </view>
+              <view class="_div data-v-f7da0fba router" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}">详情></view>
+            </view>
+          </radio>
+        </view>
+      </radio-group>
+    </scroll-view>
+    <view class="_div data-v-f7da0fba next">
+      <button class="_button data-v-f7da0fba button" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">下一步</button>
+    </view>
+  </view>
+</template>

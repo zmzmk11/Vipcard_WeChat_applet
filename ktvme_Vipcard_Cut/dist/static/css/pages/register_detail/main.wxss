@@ -1,0 +1,39 @@
+@import "/static/css/vendor.wxss";
+
+page {
+  background: #f5f5f5;
+}
+.warn {
+  font-size: 30rpx;
+  color: red;
+  margin-left: 230rpx;
+  margin-top: 10rpx;
+}
+.display {
+  display: flex;
+  flex-direction: row;
+  margin-top: 6vh;
+}
+radio-group {
+  background: white;
+  width: 70vw;
+}
+._input {
+  background: white;
+  height: 8vh;
+}
+.radio1 {
+  position: relative;
+  top: 1.7vh;
+  left: 30rpx;
+}
+.radio2 {
+  position: relative;
+  top: 1.7vh;
+  left: 100rpx;
+}
+.dateshow {
+  width: 70vw;
+  background: white;
+  height: 8vh;
+}

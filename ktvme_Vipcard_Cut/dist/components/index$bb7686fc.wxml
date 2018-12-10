@@ -1,0 +1,12 @@
+<template name="index$bb7686fc">
+  <view class="_div data-v-d5157dea page">
+    <view class="_div data-v-d5157dea content">
+      <view class="_div data-v-d5157dea head">请选择会员卡进行绑定</view>
+      <view class="_div data-v-d5157dea card" bindtap="handleProxy" wx:key="item.cardnum" key="{{item.cardnum}}" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{unbindcard}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-d5157dea gradename">{{item.gradename}}</view>
+        <view class="_div data-v-d5157dea cardnum">No.{{item.cardnum}}</view>
+        <view class="_div data-v-d5157dea companyname">{{item.companyname}}</view>
+      </view>
+    </view>
+  </view>
+</template>

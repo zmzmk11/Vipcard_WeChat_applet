@@ -1,0 +1,36 @@
+<template name="index$17385e64">
+  <view class="_div data-v-b760b798 page">
+    <view class="_div data-v-b760b798 msg">
+      <image class="_img data-v-b760b798 logo" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/大手机_03.png"></image>
+      <view class="_div data-v-b760b798 phone">您的电话号码：{{secretphone}}</view>
+      <view class="_div data-v-b760b798 head">请验证会员卡的手机号，即可完成绑定啦~</view>
+    </view>
+    <view class="_div data-v-b760b798 content">
+      <view class="_div data-v-b760b798 item">
+        <view class="_div data-v-b760b798 title">国家/地区：</view>
+        <picker bindchange="handleProxy" value="{{index}}" range-key="content" range="{{areagroup}}" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_picker data-v-b760b798">
+          <view class="_div data-v-b760b798 select">
+            <view class="_div data-v-b760b798">{{areagroup[index].content}}</view>
+            <image class="_img data-v-b760b798 fold" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/unfold.png"></image>
+          </view>
+        </picker>
+      </view>
+      <view wx:if="{{identifyCode}}" class="_div data-v-b760b798 line"></view>
+      <view wx:if="{{identifyCode}}" class="_div data-v-b760b798 item">
+        <input maxlength="6" value="{{img_code}}" bindinput="handleProxy" placeholder="请输入图形验证码" class="_input data-v-b760b798 input" data-eventid="{{'1'}}" data-comkey="{{$k}}" />
+        <view class="_div data-v-b760b798 code">
+          <canvas canvas-id="verify_code" class="_canvas data-v-b760b798" style=" {{(  'width:' +  (width + 'px') +  ';' +  'height:' +  (height + 'px') +  ';' +  'position:' +  'absolute' +  ';' +  'top:' +  '-9999px' +  ';')}}"></canvas>
+          <image src="{{verifyPic}}" class="_img data-v-b760b798" style=" {{('width:' + (width + 'px') + ';' + 'height:' + (height + 'px') + ';')}}"></image>
+        </view>
+      </view>
+      <view class="_div data-v-b760b798 line"></view>
+      <view class="_div data-v-b760b798 item">
+        <input type="number" maxlength="6" value="{{verification_code}}" bindinput="handleProxy" placeholder="请输入验证码" class="_input data-v-b760b798 input" data-eventid="{{'2'}}" data-comkey="{{$k}}" />
+        <view class="_div data-v-b760b798 code-btn" bindtap="handleProxy" wx:if="{{show}}" data-eventid="{{'3'}}" data-comkey="{{$k}}">获取验证码</view>
+        <view class="_div data-v-b760b798 code-btn" style="background:white" wx:else>{{count}}s重发</view>
+      </view>
+    </view>
+    <view class="_div data-v-b760b798 no" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">不是您的手机号？</view>
+    <button class="_button data-v-b760b798 btn" open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">确定</button>
+  </view>
+</template>

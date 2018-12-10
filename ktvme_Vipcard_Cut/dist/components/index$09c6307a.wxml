@@ -1,0 +1,79 @@
+<template name="index$09c6307a">
+  <view class="_div data-v-12e7a620">
+    <scroll-view scroll-y="{{true}}" class="_scroll-view data-v-12e7a620" style=" {{('height:' + '90vh' + ';')}}">
+      <view class="_div data-v-12e7a620 pic">
+        <view style="height:20vh" class="_div data-v-12e7a620">
+          <image class="_img data-v-12e7a620 coupon" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/优惠券icon.png"></image>
+        </view>
+        <view style="height:10vh;background: linear-gradient(#f5f5f5, #868282);" class="_div data-v-12e7a620">
+          <view class="_div data-v-12e7a620 name" wx:if="{{coupon_detail.remarks}}">{{coupon_detail.change_money+coupon_detail.present_money}}元充值卡</view>
+          <view class="_div data-v-12e7a620 name" wx:if="{{coupon_detail.coupon_introduce_html}}">{{coupon_detail.coupon_long_name}}</view>
+        </view>
+      </view>
+      <view wx:if="{{coupon_detail.remarks}}" class="_div data-v-12e7a620">
+        <view class="_div data-v-12e7a620 title">商品介绍：</view>
+        <view class="_div data-v-12e7a620 content">
+          <rich-text nodes="{{coupon_detail.remarks}}" class="_div data-v-12e7a620">
+            <view class="_div data-v-12e7a620">{{coupon_detail.remarks}}</view>
+          </rich-text>
+        </view>
+      </view>
+      <view wx:if="{{coupon_detail.coupon_introduce_html}}" class="_div data-v-12e7a620">
+        <view class="_div data-v-12e7a620 title">商品介绍：</view>
+        <view class="_div data-v-12e7a620 content">
+          <rich-text nodes="{{coupon_detail.coupon_introduce_html}}" class="_div data-v-12e7a620">
+            <view class="_div data-v-12e7a620">{{coupon_detail.coupon_introduce_html}}</view>
+          </rich-text>
+        </view>
+      </view>
+      <view wx:if="{{coupon_detail.coupon_date_html}}" class="_div data-v-12e7a620">
+        <view class="_div data-v-12e7a620 title">有效日期：</view>
+        <view class="_div data-v-12e7a620 content">
+          <rich-text nodes="{{coupon_detail.coupon_date_html}}" class="_div data-v-12e7a620">
+            <view class="_div data-v-12e7a620">{{coupon_detail.coupon_date_html}}</view>
+          </rich-text>
+        </view>
+      </view>
+      <view wx:if="{{coupon_detail.coupon_time_html}}" class="_div data-v-12e7a620">
+        <view class="_div data-v-12e7a620 title">可用时段：</view>
+        <view class="_div data-v-12e7a620 content">
+          <rich-text nodes="{{coupon_detail.coupon_time_html}}" class="_div data-v-12e7a620">
+            <view class="_div data-v-12e7a620">{{coupon_detail.coupon_time_html}}</view>
+          </rich-text>
+        </view>
+      </view>
+      <view wx:if="{{coupon_detail.coupon_company_html}}" class="_div data-v-12e7a620">
+        <view class="_div data-v-12e7a620 title">适用商家：</view>
+        <view class="_div data-v-12e7a620 content">
+          <rich-text nodes="{{coupon_detail.coupon_company_html}}" class="_div data-v-12e7a620">
+            <view class="_div data-v-12e7a620">{{coupon_detail.coupon_company_html}}</view>
+          </rich-text>
+        </view>
+      </view>
+      <view wx:if="{{coupon_detail.coupon_unusable_room_type_html}}" class="_div data-v-12e7a620">
+        <view class="_div data-v-12e7a620 title">超市不可用包厢类型：</view>
+        <view class="_div data-v-12e7a620 content">
+          <rich-text nodes="{{coupon_detail.coupon_unusable_room_type_html}}" class="_div data-v-12e7a620">
+            <view class="_div data-v-12e7a620">{{coupon_detail.coupon_unusable_room_type_html}}</view>
+          </rich-text>
+        </view>
+      </view>
+      <view wx:if="{{coupon_detail.coupon_memo_html}}" class="_div data-v-12e7a620">
+        <view class="_div data-v-12e7a620 title">使用须知：</view>
+        <view class="_div data-v-12e7a620 content">
+          <rich-text nodes="{{coupon_detail.coupon_memo_html}}" class="_div data-v-12e7a620">
+            <view class="_div data-v-12e7a620">{{coupon_detail.coupon_memo_html}}</view>
+          </rich-text>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="_div data-v-12e7a620 bottom">
+      <view class="_div data-v-12e7a620 part1">
+        <label style="font-size:30rpx;color:gray;margin-left:5vw" class="_span data-v-12e7a620">单价：</label>
+        <label style="color:rgb(255, 115, 0);margin-left:2vw" class="_span data-v-12e7a620">{{coupon_detail.integral}}</label>
+        <label style="margin-left:2vw" class="_span data-v-12e7a620">积分</label>
+      </view>
+      <button class="_button data-v-12e7a620 btn" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">立即兑换</button>
+    </view>
+  </view>
+</template>

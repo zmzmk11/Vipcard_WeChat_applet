@@ -1,0 +1,64 @@
+@import "/static/css/vendor.wxss";
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.pic {
+  background: #f5f5f5;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+}
+.coupon {
+  width: 60vw;
+  height: 30vh;
+  position: absolute;
+  top: -3vh;
+  left: 20vw;
+  -webkit-box-reflect: below -150rpx -webkit-gradient(linear, left top, left bottom, from(#fff), to(transparent));
+}
+.name {
+  position: absolute;
+  top: 23vh;
+  left: 5vw;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #fff;
+}
+.title {
+  margin-top: 3vh;
+  margin-left: 5vw;
+  font-size: 34rpx;
+  color: #808080;
+}
+.content {
+  margin-top: 1vh;
+  margin-left: 7vw;
+  font-size: 30rpx;
+}
+.bottom {
+  background: #f5f5f5;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  line-height: 7vh;
+}
+.part1 {
+  font-size: 34rpx;
+  padding: 1.5vh;
+  width: 50vw;
+}
+.btn {
+  background: #ff7300;
+  width: 30vw;
+  height: 6vh;
+  margin-top: 2vh;
+  line-height: 6vh;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  margin-left: 10vw;
+}

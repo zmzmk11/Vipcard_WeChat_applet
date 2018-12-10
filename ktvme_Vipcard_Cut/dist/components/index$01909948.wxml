@@ -1,0 +1,11 @@
+<template name="index$01909948">
+  <view class="_div data-v-586df359">
+    <view class="_div data-v-586df359 page">
+      <view class="_div data-v-586df359">
+        <label class="_span data-v-586df359">页面出错啦~</label>
+        <image src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/empty_prompt.png" class="_img data-v-586df359"></image>
+        <button bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-586df359">重试</button>
+      </view>
+    </view>
+  </view>
+</template>

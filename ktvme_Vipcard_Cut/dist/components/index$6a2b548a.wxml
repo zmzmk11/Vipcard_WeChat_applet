@@ -1,0 +1,19 @@
+<template name="index$6a2b548a">
+  <view class="_div data-v-37c115b0 page">
+    <view class="_div data-v-37c115b0 title">
+      <label style="padding-top:0.5vh;font-size:30rpx;" class="_span data-v-37c115b0">订单查询：</label>
+      <picker bindchange="handleProxy" value="{{index}}" range-key="content" range="{{monthgroup}}" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_picker data-v-37c115b0">
+        <view class="_div data-v-37c115b0 select">
+          <view style="width:18vw;text-align:center;padding:7rpx;padding-left:15rpx" class="_div data-v-37c115b0">{{monthgroup[index].content}}</view>
+          <image class="_img data-v-37c115b0 fold" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/unfold.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="_div data-v-37c115b0 line"></view>
+    <view wx:if="{{exchange==''}}" class="_div data-v-37c115b0 content">
+      <image class="_img data-v-37c115b0 img" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/empty_prompt.png"></image>
+      <view style="margin-top:2vh;color:gray" class="_div data-v-37c115b0">您还没有兑换记录~</view>
+      <view style="margin-top:2vh" class="_div data-v-37c115b0">赶紧去兑换吧</view>
+    </view>
+  </view>
+</template>

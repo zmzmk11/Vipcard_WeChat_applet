@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/logs/main",
+    "pages/bindcard/main",
+    "pages/card_detail/main",
+    "pages/choose_bindcard/main",
+    "pages/chooseKtv/main",
+    "pages/conversion_record/main",
+    "pages/coupon_detail/main",
+    "pages/detail/main",
+    "pages/erroPage/main",
+    "pages/home/main",
+    "pages/index/main",
+    "pages/integral/main",
+    "pages/map/main",
+    "pages/memberright/main",
+    "pages/order/main",
+    "pages/pay/main",
+    "pages/recharge/main",
+    "pages/register_detail/main",
+    "pages/register/main",
+    "pages/update_information/main",
+    "pages/update/main",
+    "pages/verify_phonenum/main",
+    "pages/vipcard/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

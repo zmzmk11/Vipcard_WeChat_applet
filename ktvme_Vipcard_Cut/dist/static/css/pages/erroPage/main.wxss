@@ -1,0 +1,36 @@
+@import "/static/css/vendor.wxss";
+
+.page.data-v-586df359 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page ._div.data-v-586df359 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.page ._span.data-v-586df359 {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #ff7300;
+  margin-top: -10vh;
+}
+.page ._img.data-v-586df359 {
+  margin-left: auto;
+  margin-top: 18vw;
+  width: 45vw;
+  height: 45vw;
+}
+.page ._button.data-v-586df359 {
+  margin-top: 10vw;
+  width: 30vw;
+  background: #fff;
+  color: #ff7300;
+  border: 2rpx solid #ff7300;
+}

@@ -1,0 +1,1 @@
+<import src="../../components/index$db848d5a" /><template is="index$db848d5a" data="{{ ...$root['0'], $root }}"/>

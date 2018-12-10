@@ -1,0 +1,53 @@
+@import "/static/css/vendor.wxss";
+
+.container.data-v-52c934de {
+  width: 100%;
+  background: #f5f5f5;
+  height: 100vh;
+}
+.block.data-v-52c934de {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  top: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.block1.data-v-52c934de {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  top: 60rpx;
+  display: flex;
+  flex-direction: column;
+}
+.head.data-v-52c934de {
+  font-size: 36rpx;
+  padding: 30rpx;
+  margin-left: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.line.data-v-52c934de {
+  border-style: none none solid none;
+  border-width: 4rpx;
+  width: 90%;
+  margin-left: 10%;
+  border-color: #f5f5f5;
+}
+.content.data-v-52c934de {
+  font-size: 32rpx;
+  padding: 30rpx;
+  margin-left: 50rpx;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.pic.data-v-52c934de {
+  padding-top: 8rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.font.data-v-52c934de {
+  margin-left: 15rpx;
+}

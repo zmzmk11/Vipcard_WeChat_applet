@@ -1,0 +1,32 @@
+<template name="index$4e49688b">
+  <view class="_div data-v-6b7a0442 page">
+    <view wx:if="{{showId==true}}" class="_div data-v-6b7a0442 dropdown">
+      <view class="_div data-v-6b7a0442 triangle_border_up">
+        <label class="_span data-v-6b7a0442"></label>
+      </view>
+    </view>
+    <view class="_div data-v-6b7a0442 header">
+      <view class="_div data-v-6b7a0442 header-font" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+        <image class="_img data-v-6b7a0442 icon-card" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-列表icon_03.png"></image>
+        <view style="margin-left:10rpx" class="_div data-v-6b7a0442">会员卡列表</view>
+      </view>
+      <view class="_div data-v-6b7a0442 header-a" wx:if="{{login_type==2}}" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+        <image class="_img data-v-6b7a0442 add" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-添加_06.png"></image>
+        <view id="a" style="margin-left:6rpx" class="_div data-v-6b7a0442">添加</view>
+      </view>
+    </view>
+    <scroll-view scroll-y="{{true}}" class="_scroll-view data-v-6b7a0442" style=" {{('height:' + 'calc(99vh-10vw)' + ';' + 'margin-top:' + '1vh' + ';')}}">
+      <view style="padding-top:1vh;padding-bottom:0vh" wx:key="item.kmid" key="{{item.kmid}}" wx:for="{{bindedItems}}" wx:for-index="index" wx:for-item="item" class="_div data-v-6b7a0442">
+        <view id="card" class="_div data-v-6b7a0442 card" wx:if="{{item.uselimitdate}}" bindtap="handleProxy" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}">
+          <view class="_div data-v-6b7a0442 flex">
+            <view style="padding: 3vw 5rpx 4vw 5rpx;margin-left: 5vw;color:white" class="_div data-v-6b7a0442">{{item.gradename}}</view>
+          </view>
+          <view class="_div data-v-6b7a0442 bottom">
+            <view class="_p data-v-6b7a0442 ktv_name">{{item.companyname}}</view>
+            <view class="_p data-v-6b7a0442 time" wx:if="{{item.uselimitdate}}">有效期至：{{item.uselimitdate}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

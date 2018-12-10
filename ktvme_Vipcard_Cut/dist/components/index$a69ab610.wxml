@@ -1,0 +1,33 @@
+<template name="index$a69ab610">
+  <view class="_div data-v-5b855fee page">
+    <view style="background:white" class="_div data-v-5b855fee">
+      <view class="_div data-v-5b855fee display">
+        <view class="_div data-v-5b855fee title">头像</view>
+        <view class="_div data-v-5b855fee content">
+          <image class="_img data-v-5b855fee userinfo-avatar" style="margin-top:1.5vw" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        </view>
+      </view>
+      <view class="_div data-v-5b855fee line"></view>
+      <view class="_div data-v-5b855fee display">
+        <view class="_div data-v-5b855fee title">姓名</view>
+        <view class="_div data-v-5b855fee content">{{choose.membername}}</view>
+      </view>
+      <view class="_div data-v-5b855fee line"></view>
+      <view class="_div data-v-5b855fee display">
+        <view class="_div data-v-5b855fee title">性别</view>
+        <view class="_div data-v-5b855fee content">{{choose.sex}}</view>
+      </view>
+      <view class="_div data-v-5b855fee line"></view>
+      <view class="_div data-v-5b855fee display">
+        <view class="_div data-v-5b855fee title">手机号</view>
+        <view class="_div data-v-5b855fee content">{{choose.mobile}}</view>
+      </view>
+      <view class="_div data-v-5b855fee line"></view>
+      <view class="_div data-v-5b855fee display">
+        <view class="_div data-v-5b855fee title">生日</view>
+        <view class="_div data-v-5b855fee content">{{choose.birthday}}</view>
+      </view>
+    </view>
+    <view class="_div data-v-5b855fee note">如需修改资料请前往KTV服务台办理</view>
+  </view>
+</template>

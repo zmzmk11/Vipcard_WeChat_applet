@@ -1,0 +1,6 @@
+<template name="index$17836669">
+  <view class="_div data-v-6e48bb0c container">
+    <image src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/people_default.png" class="_img data-v-6e48bb0c"></image>
+    <button open-type="getPhoneNumber" bindgetphonenumber="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-6e48bb0c">立即前往绑卡</button>
+  </view>
+</template>

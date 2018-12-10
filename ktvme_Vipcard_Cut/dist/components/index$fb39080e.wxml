@@ -1,0 +1,13 @@
+<template name="index$fb39080e">
+  <view class="_div data-v-553dd5cd">
+    <view class="_div data-v-553dd5cd input">
+      <image style="height:40rpx;width:6vw;margin-left:2vw" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/input.png" class="_img data-v-553dd5cd"></image>
+      <input style="width:60vw;margin-left:20rpx;font-size:18px;" maxlength="20" type="number" placeholder="请输入实体卡号或手机号" value="{{cardnum}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-553dd5cd" />
+      <image hidden="{{!(cardnum)}}" bindtap="handleProxy" class="_img data-v-553dd5cd clean" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/错误.png" data-eventid="{{'1'}}" data-comkey="{{$k}}"></image>
+      <view class="_div data-v-553dd5cd fill" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">填充手机号</view>
+    </view>
+    <view class="_div data-v-553dd5cd next">
+      <button class="_button data-v-553dd5cd btn" style open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">下一步</button>
+    </view>
+  </view>
+</template>

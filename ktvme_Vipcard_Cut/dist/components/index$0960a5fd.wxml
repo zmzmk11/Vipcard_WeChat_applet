@@ -1,0 +1,25 @@
+<template name="index$0960a5fd">
+  <view style="background:#F5F5F5;height:100vh" class="_div data-v-52c934de">
+    <view class="_div data-v-52c934de block">
+      <view class="_div data-v-52c934de head">
+        <image class="_img data-v-52c934de pic" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/品牌专享.png"></image>
+        <label class="_span data-v-52c934de font">会员权益</label>
+      </view>
+      <view class="_div data-v-52c934de line"></view>
+      <rich-text class="_div data-v-52c934de content" nodes="{{choose.memberrights}}">
+        <view class="_div data-v-52c934de">{{choose.memberrights}}</view>
+      </rich-text>
+    </view>
+    <view class="_div data-v-52c934de block1">
+      <view class="_div data-v-52c934de head">
+        <image class="_img data-v-52c934de pic" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/手机.png"></image>
+        <label class="_span data-v-52c934de font">商家电话</label>
+      </view>
+      <view class="_div data-v-52c934de line"></view>
+      <view class="_div data-v-52c934de content" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+        <image class="_img data-v-52c934de pic" style="padding-top: 3rpx;" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/telephone.png"></image>
+        <label class="_span data-v-52c934de font">{{choose.relationphone}}</label>
+      </view>
+    </view>
+  </view>
+</template>
