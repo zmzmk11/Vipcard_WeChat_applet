@@ -9,8 +9,8 @@
     </div>
     <div v-if="ambar" class="qr-amplify" @click="amBar">
       <div style="margin:auto;transform: rotate(-90deg);text-align:center">
-        <img style="width:500rpx;height:120rpx" :src="barcpic" alt>
-        <div class="bar-font">{{barcode}}</div>
+        <img style="width:600rpx;height:144rpx" :src="barcpic" alt>
+        <div class="bar-font" style="font-size:32rpx">{{barcode}}</div>
       </div>
     </div>
     <div v-if="!amplify&&!ambar">

@@ -9,8 +9,8 @@
     </view>
     <view wx:if="{{ambar}}" class="_div data-v-79641194 qr-amplify" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
       <view style="margin:auto;transform: rotate(-90deg);text-align:center" class="_div data-v-79641194">
-        <image style="width:500rpx;height:120rpx" src="{{barcpic}}" alt class="_img data-v-79641194"></image>
-        <view class="_div data-v-79641194 bar-font">{{barcode}}</view>
+        <image style="width:600rpx;height:144rpx" src="{{barcpic}}" alt class="_img data-v-79641194"></image>
+        <view class="_div data-v-79641194 bar-font" style="font-size:32rpx">{{barcode}}</view>
       </view>
     </view>
     <view wx:if="{{!amplify&&!ambar}}" class="_div data-v-79641194">

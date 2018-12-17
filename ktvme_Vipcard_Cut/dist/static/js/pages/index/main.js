@@ -524,6 +524,11 @@ if (false) {(function () {
       }))();
     }
   }),
+  mounted: function mounted() {
+    wx.setEnableDebug({
+      enableDebug: true
+    });
+  },
   onShow: function onShow() {
     var _this5 = this;
 

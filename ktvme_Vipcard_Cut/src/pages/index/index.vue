@@ -300,6 +300,11 @@ export default {
       }
     }
   },
+  mounted() {
+    wx.setEnableDebug({
+      enableDebug: true
+    });
+  },
   async onShow() {
     var store = this.$store.state;
     this.unbind = [];

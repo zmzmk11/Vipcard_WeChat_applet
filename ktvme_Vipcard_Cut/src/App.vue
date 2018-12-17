@@ -121,7 +121,7 @@ export default {
       } else if (!options.query.kmid) {
         store.login_type = 1;
         store.company_id = -1;
-        var url="../logs/main"
+        var url="./pages/logs/main"
         wx.reLaunch({url})
       }
     }

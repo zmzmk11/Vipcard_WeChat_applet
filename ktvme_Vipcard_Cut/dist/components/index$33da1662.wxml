@@ -8,7 +8,7 @@
         <view bindtap="handleProxy" class="_div data-v-a5316638 btn {{[item.checked ? 'on' : '']}}" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}">{{item.lable}}</view>
       </view>
     </view>
-    <scroll-view wx:if="{{detail!=''}}" scroll-y="{{true}}" class="_scroll-view data-v-a5316638" style=" {{('height:' + '87vh' + ';')}}">
+    <scroll-view wx:if="{{detail!=undefined}}" scroll-y="{{true}}" class="_scroll-view data-v-a5316638" style=" {{('height:' + '87vh' + ';')}}">
       <view wx:key="items.value" key="{{items.value}}" class="_div data-v-a5316638 content" wx:for="{{detail}}" wx:for-index="index" wx:for-item="items">
         <view style="padding:15rpx 0rpx 10rpx 30rpx;font-size:30rpx;" class="_div data-v-a5316638">{{items.title}}</view>
         <view bindtap="handleProxy" wx:key="val" key="{{val}}" data-eventid="{{'1-'+index+'-'+val}}" data-comkey="{{$k}}" wx:for="{{items.context}}" wx:for-index="val" wx:for-item="item" class="_div data-v-a5316638">

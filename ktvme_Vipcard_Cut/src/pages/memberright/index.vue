@@ -139,7 +139,7 @@ export default {
 
 .line {
   border-style: none none solid none;
-  border-width: 2px;
+  border-width: 1px;
   width: 90%;
   margin-left: 10%;
   border-color: bg_color;

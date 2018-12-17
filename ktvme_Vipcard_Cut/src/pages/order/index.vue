@@ -6,7 +6,7 @@
     <div class="btn-content">
       <div class="item" v-for="(item,index) in search_group" :key="item.id"><div @click="search(index)" class="btn" :class="{'on':item.checked}">{{item.lable}}</div></div>
     </div>
-    <scroll-view v-if="detail!=''" :style="{'height': '87vh'}" :scroll-y="true">
+    <scroll-view v-if="detail!=undefined" :style="{'height': '87vh'}" :scroll-y="true">
      <div v-for="items in detail" :key="items.value"  class="content">
        <div style="padding:15rpx 0rpx 10rpx 30rpx;font-size:30rpx;">{{items.title}}</div>
        <div v-for="(item,val) in items.context" @click="show(item.orderno)" :key="val">

@@ -329,7 +329,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         }
       }
     }, [_vm._v(_vm._s(item.lable))])])
-  })), _vm._v(" "), (_vm.detail != '') ? _c('scroll-view', {
+  })), _vm._v(" "), (_vm.detail != undefined) ? _c('scroll-view', {
     style: ({
       'height': '87vh'
     }),

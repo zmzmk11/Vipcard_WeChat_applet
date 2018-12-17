@@ -44,7 +44,7 @@
 }
 .line.data-v-c32137d0 {
   border-style: none none solid none;
-  border-width: 4rpx;
+  border-width: 2rpx;
   width: 90%;
   margin-left: 10%;
   border-color: #f5f5f5;

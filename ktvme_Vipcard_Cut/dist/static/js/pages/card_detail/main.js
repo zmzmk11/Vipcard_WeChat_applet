@@ -488,15 +488,18 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }, [_c('img', {
     staticStyle: {
-      "width": "500rpx",
-      "height": "120rpx"
+      "width": "600rpx",
+      "height": "144rpx"
     },
     attrs: {
       "src": _vm.barcpic,
       "alt": ""
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "bar-font"
+    staticClass: "bar-font",
+    staticStyle: {
+      "font-size": "32rpx"
+    }
   }, [_vm._v(_vm._s(_vm.barcode))])])]) : _vm._e(), _vm._v(" "), (!_vm.amplify && !_vm.ambar) ? _c('div', [_c('div', {
     staticClass: "card"
   }, [_c('div', {
