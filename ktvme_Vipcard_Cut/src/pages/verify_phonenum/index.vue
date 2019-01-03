@@ -220,7 +220,7 @@ export default {
           cardnum: this.cardnum,
           customerid: store.customer_id,
           companyid: store.company_id,
-          platformsource: 0,
+          platformsource: store.platformsource,
           openid: store.openid,
           user_source: 1,
           c: this.verification_code

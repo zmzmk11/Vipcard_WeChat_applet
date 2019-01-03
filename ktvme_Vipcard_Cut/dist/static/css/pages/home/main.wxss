@@ -44,7 +44,6 @@
   width: 85vw;
   margin-left: 7.5vw;
   margin-bottom: 4vw;
-  background-image: url("https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/ecard.png");
   background-size: cover;
   -moz-box-shadow: 4rpx 4rpx 10rpx #333;
   -webkit-box-shadow: 4rpx 4rpx 10rpx #333;
@@ -132,7 +131,7 @@
   font-size: 30rpx;
   width: 100%;
   position: relative;
-  top: 20vw;
+  top: 19vw;
   display: flex;
   flex-direction: row;
   border-bottom-right-radius: 6rpx;

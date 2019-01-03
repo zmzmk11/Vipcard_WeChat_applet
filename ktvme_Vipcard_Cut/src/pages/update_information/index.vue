@@ -139,7 +139,7 @@ export default {
           membername: this.name,
           mobile: this.mobile,
           ordertype: 1,
-          platformsource: 2,
+          platformsource: this.$store.state.platformsource,
           rulesid: 0,
           sex: this.choose.sex,
           totalmoney: this.choose.sellmoney

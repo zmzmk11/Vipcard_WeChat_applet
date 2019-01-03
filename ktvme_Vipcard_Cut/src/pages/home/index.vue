@@ -1,35 +1,51 @@
 <template>
-<div class="page">
-   <div v-if="showId==true" class="dropdown"  >
-     <div class="triangle_border_up">
-    <span></span>
-    </div>
-  </div>
-  <div class="header">
-    <div class="header-font" @click="hideList()">
-      <img class="icon-card" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-列表icon_03.png" />
-      <div style="margin-left:10rpx">会员卡列表</div>
-    </div>
-    <div class="header-a" v-if="login_type==2" @click="toBind">
-      <img class="add" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-添加_06.png"/>
-      <div id="a" style="margin-left:6rpx">添加</div> 
-    </div>
-  </div>
-  <scroll-view  :style="{'height': 'calc(99vh-10vw)','margin-top':'1vh'}" :scroll-y="true">
-    <div style="padding-top:1vh;padding-bottom:0vh" v-for="item in bindedItems" :key="item.kmid">
-    <div id="card" class="card" v-if="item.uselimitdate"  @click="toVipCard(item.kmid,item.companyid,item.uselimitdate)" >
-      <div class="flex">
-        <div style="padding: 3vw 5rpx 4vw 5rpx;margin-left: 5vw;color:white">{{item.gradename}}</div>
-      <!-- <div class="flag" v-if="!item.uselimitdate">待审核</div> -->
-      </div>
-      <div class="bottom">
-        <p class="ktv_name">{{item.companyname}}</p>
-        <P class="time" v-if="item.uselimitdate">有效期至：{{item.uselimitdate}}</P>
+  <div class="page">
+    <div v-if="showId==true" class="dropdown">
+      <div class="triangle_border_up">
+        <span></span>
       </div>
     </div>
+    <div class="header">
+      <div class="header-font" @click="hideList()">
+        <img
+          class="icon-card"
+          src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-列表icon_03.png"
+        >
+        <div style="margin-left:10rpx">会员卡列表</div>
+      </div>
+      <div class="header-a" v-if="login_type==2" @click="toBind">
+        <img
+          class="add"
+          src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-添加_06.png"
+        >
+        <div id="a" style="margin-left:6rpx">添加</div>
+      </div>
     </div>
-</scroll-view>
-</div>
+    <scroll-view :style="{'height': 'calc(99vh-10vw)','margin-top':'1vh'}" :scroll-y="true">
+      <div
+        style="padding-top:1vh;padding-bottom:0vh"
+        v-for="(item,index) in bindedItems"
+        :key="item.kmid"
+      >
+        <div
+          id="card"
+          class="card"
+          :style="{'background-image':'url('+background_img[index%3]+')'}"
+          v-if="item.uselimitdate"
+          @click="toVipCard(item.kmid,item.companyid,item.uselimitdate)"
+        >
+          <div class="flex">
+            <div style="padding: 6vw 5rpx 4vw 5rpx;margin-left: 5vw;color:white">{{item.gradename}}</div>
+            <!-- <div class="flag" v-if="!item.uselimitdate">待审核</div> -->
+          </div>
+          <div class="bottom">
+            <p class="ktv_name">{{item.companyname}}</p>
+            <P class="time" v-if="item.uselimitdate">有效期至：{{item.uselimitdate}}</P>
+          </div>
+        </div>
+      </div>
+    </scroll-view>
+  </div>
 </template>
 
 <script>
@@ -48,13 +64,17 @@ export default {
       result: [],
       showId: false,
       bindedItems: [],
-      login_type: ""
+      login_type: "",
+      background_img: [
+        "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员蓝_03.png",
+        "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员红_03.png",
+        "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员黄_03.png"
+      ]
     };
   },
   methods: {
     ...mapActions(["getForward", "setUserInfo"]),
-    scrolltolower() {
-    },
+    scrolltolower() {},
     scroll(e) {
       console.log(e);
     },
@@ -183,8 +203,8 @@ export default {
   width: 85vw;
   margin-left: 7.5vw;
   margin-bottom: 4vw;
+  // background-image: url('https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/ecard.png');
   /* background: pink; */
-  background-image: url('https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/ecard.png');
   background-size: cover; /* 平铺 */
   -moz-box-shadow: 2px 2px 5px #333333;
   -webkit-box-shadow: 2px 2px 5px #333333;
@@ -290,7 +310,7 @@ export default {
   // opacity: 0.6;
   width: 100%;
   position: relative;
-  top: 20vw;
+  top: 19vw;
   display: flex;
   flex-direction: row;
   border-bottom-right-radius: 3px;

@@ -6813,7 +6813,7 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vuex
 var state = {
     company_id: "",
     mobile: 0,
-    platformsource: 0,
+    platformsource: 10,
     showing: false,
     customerid: [],
     iv_salt: {},

@@ -12,7 +12,7 @@ Vue.use(vuex);
 const state = {
     company_id: "",
     mobile: 0,
-    platformsource: 0,
+    platformsource: 10,
     showing: false,
     customerid: [],
     iv_salt: {},

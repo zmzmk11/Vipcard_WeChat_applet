@@ -335,7 +335,7 @@ var drawVcode = __webpack_require__(225);
                   cardnum: _this2.cardnum,
                   customerid: store.customer_id,
                   companyid: store.company_id,
-                  platformsource: 0,
+                  platformsource: store.platformsource,
                   openid: store.openid,
                   user_source: 1,
                   c: _this2.verification_code

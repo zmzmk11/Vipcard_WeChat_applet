@@ -216,7 +216,7 @@ if (false) {(function () {
                 }, {
                   companyid: store.company_id,
                   mobile: _this.mobile,
-                  platformsource: 0
+                  platformsource: store.platformsource
                 }]);
 
               case 4:
@@ -245,7 +245,7 @@ if (false) {(function () {
                   cardnum: _this.unbind[0].cardnum,
                   customerid: _this.customer_id,
                   companyid: store.company_id,
-                  platformsource: 0,
+                  platformsource: store.platformsource,
                   openid: store.openid,
                   user_source: 1
                 }]);
@@ -359,13 +359,13 @@ if (false) {(function () {
       var _this2 = this;
 
       return __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2() {
-        var store, res;
+        var store, res, url;
         return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 if (!e.mp.detail.encryptedData) {
-                  _context2.next = 9;
+                  _context2.next = 8;
                   break;
                 }
 
@@ -385,15 +385,21 @@ if (false) {(function () {
               case 4:
                 res = _context2.sent;
 
-                _this2.mobile = JSON.parse(res.data).purePhoneNumber;
-                _this2.getCustomerid();
-                _context2.next = 10;
+                if (res.ret != 0) {
+                  url = "../erroPage/main";
+
+                  wx.reLaunch({ url: url });
+                } else {
+                  _this2.mobile = JSON.parse(res.data).purePhoneNumber;
+                  _this2.getCustomerid();
+                }
+                _context2.next = 9;
                 break;
 
-              case 9:
+              case 8:
                 console.log("用户按了拒绝按钮");
 
-              case 10:
+              case 9:
               case "end":
                 return _context2.stop();
             }
@@ -487,7 +493,7 @@ if (false) {(function () {
                 }, {
                   companyid: _store.company_id,
                   mobile: _this4.cardnum,
-                  platformsource: 0
+                  platformsource: _store.platformsource
                 }]);
 
               case 7:

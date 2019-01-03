@@ -110,6 +110,12 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -119,7 +125,8 @@ if (false) {(function () {
     return {
       unbindcard: {},
       binded: {},
-      flag: ""
+      flag: "",
+      background_img: ["https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员蓝_03.png", "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员红_03.png", "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员黄_03.png"]
     };
   },
 
@@ -157,7 +164,7 @@ if (false) {(function () {
                   cardnum: _this.unbindcard[index].cardnum,
                   customerid: store.customer_id,
                   companyid: store.company_id,
-                  platformsource: 0,
+                  platformsource: store.platformsource,
                   openid: store.openid,
                   user_source: 1
                 }]);
@@ -259,6 +266,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     return _c('div', {
       key: item.cardnum,
       staticClass: "card",
+      style: ({
+        'background-image': 'url(' + _vm.background_img[index % 3] + ')'
+      }),
       attrs: {
         "eventid": '0-' + index
       },

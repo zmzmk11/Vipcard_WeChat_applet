@@ -130,6 +130,22 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -146,7 +162,8 @@ if (false) {(function () {
       result: [],
       showId: false,
       bindedItems: [],
-      login_type: ""
+      login_type: "",
+      background_img: ["https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员蓝_03.png", "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员红_03.png", "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员黄_03.png"]
     };
   },
 
@@ -315,6 +332,9 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       }
     }, [(item.uselimitdate) ? _c('div', {
       staticClass: "card",
+      style: ({
+        'background-image': 'url(' + _vm.background_img[index % 3] + ')'
+      }),
       attrs: {
         "id": "card",
         "eventid": '2-' + index
@@ -328,7 +348,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       staticClass: "flex"
     }, [_c('div', {
       staticStyle: {
-        "padding": "3vw 5rpx 4vw 5rpx",
+        "padding": "6vw 5rpx 4vw 5rpx",
         "margin-left": "5vw",
         "color": "white"
       }

@@ -2,7 +2,13 @@
   <div class="page">
     <div class="content">
       <div class="head">请选择会员卡进行绑定</div>
-      <div class="card" @click="toVerifyPhone(index)" v-for="(item,index) in unbindcard" :key="item.cardnum">
+      <div
+        class="card"
+        :style="{'background-image':'url('+background_img[index%3]+')'}"
+        @click="toVerifyPhone(index)"
+        v-for="(item,index) in unbindcard"
+        :key="item.cardnum"
+      >
         <div class="gradename">{{item.gradename}}</div>
         <div class="cardnum">No.{{item.cardnum}}</div>
         <div class="companyname">{{item.companyname}}</div>
@@ -20,7 +26,12 @@ export default {
     return {
       unbindcard: {},
       binded: {},
-      flag: ""
+      flag: "",
+      background_img: [
+        "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员蓝_03.png",
+        "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员红_03.png",
+        "https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/商家小程序首页-会员黄_03.png"
+      ]
     };
   },
 
@@ -46,7 +57,7 @@ export default {
             cardnum: this.unbindcard[index].cardnum,
             customerid: store.customer_id,
             companyid: store.company_id,
-            platformsource: 0,
+            platformsource: store.platformsource,
             openid: store.openid,
             user_source: 1
           }
@@ -125,7 +136,7 @@ export default {
   display: flex;
   align-items: center;
   font-size: 34rpx;
-  padding-bottom 2vw
+  padding-bottom: 3vw;
   padding-left: 5vw;
 }
 
@@ -137,14 +148,14 @@ export default {
 
 .card {
   position: relative;
-  padding-top: 4vw;
+  // padding-top: 7vw;
   width: 85vw;
   color: white;
   border-radius: 5px;
-  height: 35vw;
+  height: 40vw;
   margin: 0vw 7.5vw 7vw 7.5vw;
+  // background-image: url('https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/ecard.png');
   /* background: pink; */
-  background-image: url('https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/ecard.png');
   background-size: cover; /* 平铺 */
   -moz-box-shadow: 2px 2px 5px #333333;
   -webkit-box-shadow: 2px 2px 5px #333333;
@@ -152,21 +163,22 @@ export default {
 }
 
 .card .gradename {
+  padding-top: 5vw;
   margin-left: 5vw;
   font-size: 40rpx;
 }
 
 .card .cardnum {
-  margin-top: 1vh;
+  margin-top: 1.5vw;
   margin-left: 5vw;
-  font-size: 30rpx;
+  font-size: 35rpx;
 }
 
 .card .companyname {
   position: absolute;
-  bottom: 3px;
+  bottom: 2.8vw;
   margin-left: 5vw;
-  font-size: 24rpx;
+  font-size: 28rpx;
 }
 
 .card .companyname .icon {

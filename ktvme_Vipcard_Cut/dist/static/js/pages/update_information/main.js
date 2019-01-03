@@ -245,7 +245,7 @@ if (false) {(function () {
                   membername: _this.name,
                   mobile: _this.mobile,
                   ordertype: 1,
-                  platformsource: 2,
+                  platformsource: _this.$store.state.platformsource,
                   rulesid: 0,
                   sex: _this.choose.sex,
                   totalmoney: _this.choose.sellmoney

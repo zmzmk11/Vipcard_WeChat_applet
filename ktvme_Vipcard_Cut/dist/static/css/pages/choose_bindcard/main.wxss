@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   font-size: 34rpx;
-  padding-bottom: 2vw;
+  padding-bottom: 3vw;
   padding-left: 5vw;
 }
 .line.data-v-d5157dea {
@@ -24,32 +24,31 @@
 }
 .card.data-v-d5157dea {
   position: relative;
-  padding-top: 4vw;
   width: 85vw;
   color: #fff;
   border-radius: 10rpx;
-  height: 35vw;
+  height: 40vw;
   margin: 0vw 7.5vw 7vw 7.5vw;
-  background-image: url("https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/ecard.png");
   background-size: cover;
   -moz-box-shadow: 4rpx 4rpx 10rpx #333;
   -webkit-box-shadow: 4rpx 4rpx 10rpx #333;
   box-shadow: 4rpx 4rpx 10rpx #333;
 }
 .card .gradename.data-v-d5157dea {
+  padding-top: 5vw;
   margin-left: 5vw;
   font-size: 40rpx;
 }
 .card .cardnum.data-v-d5157dea {
-  margin-top: 1vh;
+  margin-top: 1.5vw;
   margin-left: 5vw;
-  font-size: 30rpx;
+  font-size: 35rpx;
 }
 .card .companyname.data-v-d5157dea {
   position: absolute;
-  bottom: 6rpx;
+  bottom: 2.8vw;
   margin-left: 5vw;
-  font-size: 24rpx;
+  font-size: 28rpx;
 }
 .card .companyname .icon.data-v-d5157dea {
   padding-right: 4rpx;

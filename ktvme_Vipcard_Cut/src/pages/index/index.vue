@@ -106,7 +106,7 @@ export default {
         {
           companyid: store.company_id,
           mobile: this.mobile,
-          platformsource: 0
+          platformsource: store.platformsource
         }
       ]);
       this.unbind = this.search(res.data);
@@ -124,7 +124,7 @@ export default {
               cardnum: this.unbind[0].cardnum,
               customerid: this.customer_id,
               companyid: store.company_id,
-              platformsource: 0,
+              platformsource: store.platformsource,
               openid: store.openid,
               user_source: 1
             }
@@ -221,8 +221,13 @@ export default {
             sk: store.sessionKey
           }
         ]);
-        this.mobile = JSON.parse(res.data).purePhoneNumber;
-        this.getCustomerid();
+        if (res.ret != 0) {
+          var url = "../erroPage/main";
+          wx.reLaunch({ url });
+        } else {
+          this.mobile = JSON.parse(res.data).purePhoneNumber;
+          this.getCustomerid();
+        }
       } else {
         console.log("用户按了拒绝按钮");
       }
@@ -276,7 +281,7 @@ export default {
           {
             companyid: store.company_id,
             mobile: this.cardnum,
-            platformsource: 0
+            platformsource: store.platformsource
           }
         ]);
         this.unbind = this.search(res.data);
