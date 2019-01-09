@@ -81,6 +81,19 @@ function handleResult(res) {
     switch (code) {
       case 0:
         store.commit("setOpenid_SK", res.data.data)
+        const res1 = wx.request({
+          method: 'post',
+          url: utils.API + '/member/api/iv_salt',
+          data: { "user_id": res.data.data.openid },
+          header: {
+              "content-type": "application/json" // 默认值
+          },
+          success: function (res1) {
+              if (!res1.data.ret) {
+                  store.commit('setIv_salt', res1.data.data);
+              }
+          }
+      })
         var url = "../logs/main"
         wx.reLaunch({ url })
         break;

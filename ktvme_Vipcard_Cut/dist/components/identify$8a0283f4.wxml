@@ -1,0 +1,5 @@
+<template name="identify$8a0283f4">
+  <view class="_div data-v-352a28c3 s-canvas">
+    <canvas id="s-canvas" width="{{contentWidth}}" height="{{contentHeight}}" class="_canvas data-v-352a28c3"></canvas>
+  </view>
+</template>

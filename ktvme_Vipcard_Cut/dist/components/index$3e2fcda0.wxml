@@ -1,0 +1,43 @@
+<template name="index$3e2fcda0">
+  <view class="_div data-v-a5316638 page">
+    <view class="_div data-v-a5316638 title">
+      <label style="padding-top:5rpx;font-size:32rpx;" class="_span data-v-a5316638">订单查询</label>
+    </view>
+    <view class="_div data-v-a5316638 btn-content">
+      <view class="_div data-v-a5316638 item" wx:key="item.id" key="{{item.id}}" wx:for="{{search_group}}" wx:for-index="index" wx:for-item="item">
+        <view bindtap="handleProxy" class="_div data-v-a5316638 btn {{[item.checked ? 'on' : '']}}" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}">{{item.lable}}</view>
+      </view>
+    </view>
+    <scroll-view wx:if="{{detail!=undefined}}" scroll-y="{{true}}" class="_scroll-view data-v-a5316638" style=" {{('height:' + '87vh' + ';')}}">
+      <view wx:key="items.value" key="{{items.value}}" class="_div data-v-a5316638 content" wx:for="{{detail}}" wx:for-index="index" wx:for-item="items">
+        <view style="padding:15rpx 0rpx 10rpx 30rpx;font-size:30rpx;" class="_div data-v-a5316638">{{items.title}}</view>
+        <view bindtap="handleProxy" wx:key="val" key="{{val}}" data-eventid="{{'1-'+index+'-'+val}}" data-comkey="{{$k}}" wx:for="{{items.context}}" wx:for-index="val" wx:for-item="item" class="_div data-v-a5316638">
+          <view class="_div data-v-a5316638 detail">
+            <view style="display:flex;flex-direction:column;width:60vw;" class="_div data-v-a5316638">
+              <label class="_span data-v-a5316638 span1">{{item.productname}}</label>
+              <view class="_div data-v-a5316638 span2">{{item.createdatetime}}</view>
+            </view>
+            <view style="width:25vw;display:flex;flex-direction:row;" class="_div data-v-a5316638">
+              <label class="_span data-v-a5316638 span3">￥{{item.cashchangemoney}}</label>
+              <image wx:if="{{orderno!=item.orderno}}" class="_img data-v-a5316638 fold1" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/fold.png"></image>
+              <image wx:else class="_img data-v-a5316638 fold1" src="https://lg-2aw9z8qs-1257131072.cos.ap-shanghai.myqcloud.com/unfold.png"></image>
+            </view>
+          </view>
+          <view class="_div data-v-a5316638 line"></view>
+          <view class="_div data-v-a5316638 remark" wx:if="{{orderno==item.orderno}}">
+            <rich-text nodes="{{item.remark}}" class="_div data-v-a5316638">{{item.remark}}</rich-text>
+          </view>
+          <view hidden="{{!(orderno==item.orderno)}}" class="_div data-v-a5316638 line"></view>
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view wx:else class="_scroll-view data-v-a5316638" style=" {{('height:' + '85vh' + ';')}}">
+      <view class="_div data-v-a5316638 none">
+        <view class="_div data-v-a5316638">
+          <image class="_img data-v-a5316638 sigui" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/empty_prompt.png"></image>
+          <label class="_span data-v-a5316638">{{search_group[index].lable}}没有订单产生！</label>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

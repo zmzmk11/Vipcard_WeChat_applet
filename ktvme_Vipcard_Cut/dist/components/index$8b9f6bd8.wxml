@@ -1,0 +1,42 @@
+<template name="index$8b9f6bd8">
+  <view class="_div data-v-c32137d0 page">
+    <view class="_div data-v-c32137d0 block">
+      <view class="_div data-v-c32137d0 head">
+        <image class="_img data-v-c32137d0 pic" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/通用绑卡小程序_01.png"></image>
+        <label class="_span data-v-c32137d0 font">会员权益</label>
+      </view>
+      <view class="_div data-v-c32137d0 line"></view>
+      <view class="_div data-v-c32137d0 content" wx:if="{{!choose.memberrights}}">商家还未添加任何会员权益!!!</view>
+      <rich-text class="_div data-v-c32137d0 content" wx:if="{{choose.memberrights}}" nodes="{{choose.memberrights}}">
+        <view class="_div data-v-c32137d0">{{choose.memberrights}}</view>
+      </rich-text>
+    </view>
+    <view class="_div data-v-c32137d0 block1" wx:if="{{flag}}">
+      <view class="_div data-v-c32137d0 head">
+        <image class="_img data-v-c32137d0 pic" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/通用绑卡小程序_02.png"></image>
+        <label class="_span data-v-c32137d0 font">适用门店</label>
+      </view>
+      <view class="_div data-v-c32137d0 line"></view>
+      <view wx:key="index" key="{{index}}" wx:for="{{applicablestores}}" wx:for-index="index" wx:for-item="items" class="_div data-v-c32137d0">
+        <view class="_div data-v-c32137d0 content" wx:key="val" key="{{val}}" bindtap="handleProxy" data-eventid="{{'0-'+index+'-'+val}}" data-comkey="{{$k}}" wx:for="{{items}}" wx:for-index="val" wx:for-item="item">
+          <view style="display:flex;flex-direction:column;margin-left:10rpx;width:70vw;color:gray" class="_div data-v-c32137d0">
+            <label class="_span data-v-c32137d0">{{item.companyname}}</label>
+            <label style="font-size:28rpx" class="_span data-v-c32137d0">(地址：{{item.companyaddress}})</label>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-c32137d0 margin"></view>
+    <view class="_div data-v-c32137d0 block2">
+      <view class="_div data-v-c32137d0 head">
+        <image class="_img data-v-c32137d0 pic" src="https://lg-0rqt3zlw-1258015598.cos.ap-shanghai.myqcloud.com/通用绑卡小程序_08.png"></image>
+        <label class="_span data-v-c32137d0 font">商家电话</label>
+      </view>
+      <view class="_div data-v-c32137d0 line"></view>
+      <view class="_div data-v-c32137d0 content" style="flex-direction:row" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+        <label class="_span data-v-c32137d0 font">{{choose.relationphone}}</label>
+      </view>
+    </view>
+    <view class="_div data-v-c32137d0 bottom"></view>
+  </view>
+</template>

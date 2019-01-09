@@ -38,7 +38,7 @@ const state = {
     recharge: [],
     openid: "",
     customer_id: '',
-    user_id: "wx955e7fafd658e54e",
+    user_id: "oSAb-0B13asu8sZ14dWSAuXjd-jE",
     ai: "wx955e7fafd658e54e",
     isPay: false,
     secret: "bbae4ad27d87e7c322e038b5b69753bd",
@@ -133,6 +133,11 @@ const mutations = {
     setUpdate(state, data) {
     },
     setOpenid_SK(state, data) {
+        state.user_id = data.openid
+        // wx.setStorage({
+        //     key:"openid",
+        //     data:data.openid
+        // })
         state.openid = data.openid
         state.sessionKey = data.session_key
     },
@@ -209,9 +214,22 @@ const actions = {
                                     },
                                 })
                                 if (!result.ret) {
+                                    commit("setOpenid_SK", result.data)
+                                    const res2 = wx.request({
+                                        method: 'post',
+                                        url: utils.API + '/member/api/iv_salt',
+                                        data: { "user_id": result.data.openid },
+                                        header: {
+                                            "content-type": "application/json" // 默认值
+                                        },
+                                        success: function (res2) {
+                                            if (!res2.data.ret) {
+                                                commit('setIv_salt', res2.data.data);
+                                            }
+                                        }
+                                    })
                                     // var url = "../index/main";
                                     // wx.reLaunch({ url });
-                                    commit("setOpenid_SK", result.data)
                                     console.log("获取openid成功")
                                 } else {
                                     var url = "../erroPage/main";
@@ -228,6 +246,7 @@ const actions = {
             }
         })
     },
+    //转发接口
     async getForward({ commit }, params) {
         if (params[0].server) {
             var server = 1
@@ -248,6 +267,7 @@ const actions = {
         commit(params[0].mutations, res);
         return res;
     },
+    //获取customerId
     async member_bind({ commit }, params) {
         const res = await request({
             method: 'post',
